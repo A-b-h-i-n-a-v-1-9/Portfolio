@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Home Content Styling */
+        .home-container {
+            display: flex; /* Use flex to position the elements side by side */
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .home-content {
+            flex: 1; /* Take up available space */
+            max-width: 50%; /* Limit width */
+            padding-right: 20px; /* Space between home content and terminal */
+        }
+
+        /* Terminal Styling */
+        .terminal {
+            width: 400px;
+            height: 300px;
+            padding-left: 10px;
+            border-radius: 5px;
+            background-color: black;
+            color: #00ff00;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow-y: scroll; /* Enable vertical scrolling */
+            position: absolute;
+            right: 50px; /* Position the terminal to the right */
+            top: 150px; /* Adjust the top position to match the left paragraph */
+            word-wrap: break-word; /* Wrap text in the terminal */
+            white-space: normal; /* Allow wrapping of long lines */
+        }
+
+        /* Hide the scrollbar, but still allow scrolling */
+        .terminal::-webkit-scrollbar {
+            display: none;
+        }
+
+        .terminal-output {
+            font-size: 1rem;
+            white-space: pre-wrap;
+        }
+
+        .terminal-input {
+            background-color: black;
+            border: none;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            outline: none;
+            width: 100%;
+        }
+
+        /* Dynamic Role Text Styling */
+        #dynamic-role {
+            font-size: 1.5rem;
+            color: #636e72;
+            font-weight: 500;
+            margin-top: 10px;
+            opacity: 1;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <div class="home-content">
+            <h1>Hello,</h1>
+            <h2>I'M ABHINAV</h2>
+            <p id="dynamic-role">I am a Software Engineer</p>
+        </div>
+    </div>
+
+    <!-- Terminal -->
+    <div class="terminal">
+        <div id="output" class="terminal-output">
+            <p>~$ Welcome to my Portfolio!</p>
+        </div>
+        <input type="text" id="command-input" class="terminal-input" placeholder="Type a command..." autofocus />
+    </div>
+
+    <script>
+        // Basic file system and text files
+        const files = {
+            "aboutme.txt": "Hi, I am Abhinav. I am passionate about software development, cybersecurity, and web development. I love solving complex problems through coding and learning new technologies.",
+            "projects.txt": "N.A",
+            "contact.txt": "Email: abhinav@domain.com\nLinkedIn: linkedin.com/in/abhinav"
+        };
+
+        // Handle commands entered in the terminal
+        const commandInput = document.getElementById('command-input');
+        const outputDiv = document.getElementById('output');
+
+        // Commands available in the terminal
+        const commands = {
+            "ls": () => {
+                const filesList = Object.keys(files).join('\n');
+                return filesList ? `Available files:\n${filesList}` : 'No files available.';
+            },
+            "cat": (args) => {
+                if (args.length === 0) return 'Usage: cat <filename>';
+                const filename = args[0];
+                return files[filename] || `File ${filename} not found.`;
+            },
+            "clear": () => {
+                outputDiv.innerHTML = '';
+                return '';
+            },
+            "help": () => {
+                return `Available commands:
+                ls        - List files
+                cat <file> - Display file contents
+                clear     - Clear the terminal
+                help      - Show this help message`;
+            }
+        };
+
+        // Function to handle the command execution
+        function executeCommand(command) {
+            const [cmd, ...args] = command.trim().split(/\s+/);
+            const commandFunction = commands[cmd];
+            if (commandFunction) {
+                return commandFunction(args);
+            } else {
+                return `'${cmd}' is not recognized as a command. Type 'help' for available commands.`;
+            }
+        }
+
+        // Handle input submission
+        commandInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                const command = commandInput.value;
+                if (command.trim()) {
+                    const output = executeCommand(command);
+                    outputDiv.innerHTML += `<p>~$ ${command}</p><p class="terminal-output">${output}</p>`;
+                    // Auto-scroll to the bottom after displaying output
+                    scrollToBottom();
+                }
+                commandInput.value = '';
+            }
+        });
+
+        // Dynamic Role Text
+        const roles = [
+            "Software Engineer",
+            "Web Developer",
+            "Cybersecurity Enthusiast",
+            "Competitive Coder"
+        ];
+
+        let currentRoleIndex = 0;
+
+        function changeRoleText() {
+            const roleElement = document.getElementById('dynamic-role');
+            roleElement.style.opacity = 0; // Fade out
+            setTimeout(() => {
+                roleElement.textContent = `I am a ${roles[currentRoleIndex]}`;
+                roleElement.style.opacity = 1; // Fade in
+                currentRoleIndex = (currentRoleIndex + 1) % roles.length; // Loop through roles
+                scrollToBottom(); // Auto-scroll after role change
+            }, 500);
+        }
+
+        // Change role text every 3 seconds
+        setInterval(changeRoleText, 3000);
+
+        // Function to auto-scroll to the bottom
+        function scrollToBottom() {
+            outputDiv.scrollTop = outputDiv.scrollHeight;
+        }
+    </script>
+</body>
+</html>

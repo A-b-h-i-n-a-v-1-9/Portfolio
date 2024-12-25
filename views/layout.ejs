@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Link to your CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Include your JavaScript -->
+    <script src="/js/main.js" defer></script>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-container" aria-hidden="true">
+        <div class="loader-ring">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="loader-text">"Designing tomorrow's solutions today"</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" style="display: none;">
+        <%- include('partials/navbar') %> <!-- Include Navbar -->
+        <%- include(content) %> <!-- Render specific content based on the route -->
+    </div>
+</body>
+</html>
