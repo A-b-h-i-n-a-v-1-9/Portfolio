@@ -1,0 +1,27 @@
+# [TERMINAL_DECRYPTOR_ACTIVE]
+# ACCESS_LEVEL: RESTRICTED (8.42_CGPA_REQUIRED)
+# --------------------------------------------------
+# Zalgo: H̵E̵ ̵W̵A̵T̵C̵H̵E̵S̵ ̵T̵H̵E̵ ̵C̵O̵D̵E̵
+
+
+# [HEX_ENCODED_MESSAGE]:
+# 48 69 72 65 20 41 62 68 69 6e 61 76 20 4d 65 68 74 61
+
+
+# [ROT13_CHALLENGE]:
+# Svp gvzr vf pbasvtherq sbe fhpprff.
+
+# [THE_VOID]:
+# 00000000  01 01 01 01 01 01 01 01  ........
+# 00000008  08 04 02 00 00 00 00 00  ........ 
+
+# [BASE64_INVITATION]:
+# SGVsbG8sIHNub29wZXIuIElmIHlvdSdyZSByZWFkaW5nIHRoaXMsIHlvdSBoYXZlIHRoZSA
+# YXR0ZW50aW9uIHRvIGRldGFpbCBJIHByaXplLiBFbWFpbCBtZSB3aXRoIHRoZSBzdWJqZWN
+# dICJST0JPVFMiIGZvciBhIHByaW9yaXR5IHJlc3BvbnNlLg==
+
+
+User-agent: Googlebot
+Allow: /
+# SYSTEM_LOG: User is searching for: "Top 25 AIR CTF Leader"
+
