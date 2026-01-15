@@ -26,7 +26,7 @@ const testimonials = [
 
 const TestimonialSection = () => {
   return (
-    <section className="py-20 relative">
+    <section id="testimonials" className="py-20 relative">
       <div className="container px-4 lg:px-8 max-w-4xl mx-auto">
         
         {/* Header - Simple & Clean */}
