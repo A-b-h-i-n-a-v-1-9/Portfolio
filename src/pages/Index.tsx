@@ -6,6 +6,7 @@ import CareerTimeline from '@/components/CareerTimeline';
 import ProjectLab from '@/components/ProjectLab';
 import CredentialRegistry from '@/components/CredentialRegistry';
 import SudoHireTerminal from '@/components/SudoHireTerminal';
+import TestimonialSection from '@/components/TestimonialSection';
 import Footer from '@/components/Footer';
 import SnakeGame from '@/components/SnakeGame';
 import MatrixRain from '@/components/MatrixRain';
@@ -52,6 +53,7 @@ const Index = () => {
         <CareerTimeline /> 
         {/* Lab includes: TwoRegisters Anomaly & Parkinson's MRI */}
         <ProjectLab /> 
+        <TestimonialSection />
         {/* Registry shows: Oracle GenAI & CCNA */}
         <CredentialRegistry /> 
         <SudoHireTerminal />
