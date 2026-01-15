@@ -57,6 +57,9 @@ const StatusBar = () => {
             <a href="#projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Projects
             </a>
+            <a href="#projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              Testimonials 
+            </a>
             <a href="#credentials" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Credentials
             </a>
