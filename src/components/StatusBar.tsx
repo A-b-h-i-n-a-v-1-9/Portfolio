@@ -9,13 +9,13 @@ const StatusBar = () => {
 
   // Handle logo click → go home + scroll top
   const handleHome = () => {
-  navigate(
-    { pathname: "/", hash: "" },
-    { replace: true }
-  );
+    navigate(
+      { pathname: "/", hash: "" },
+      { replace: true }
+    );
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
 
   useEffect(() => {
@@ -50,20 +50,49 @@ const StatusBar = () => {
           </div>
 
           {/* Navigation */}
+          {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#experience" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="#experience"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
               Experience
             </a>
-            <a href="#projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+
+            <a
+              href="#projects"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
               Projects
             </a>
-            <a href="#testimonials" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Testimonials 
+
+            <a
+              href="#testimonials"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              Testimonials
             </a>
-            <a href="#credentials" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+
+            <a
+              href="#credentials"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
               Credentials
             </a>
-            <a href="#terminal" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              Resume
+            </a>
+
+            <a
+              href="#terminal"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
               Contact
             </a>
           </nav>
