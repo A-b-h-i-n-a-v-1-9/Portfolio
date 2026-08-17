@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Twitter, Code2 } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -105,7 +105,7 @@ const HeroSection = () => {
 
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com/A-b-h-i-n-a-v-1-9"
+                href="https://github.com/Abh19avM"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -136,6 +136,15 @@ const HeroSection = () => {
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail className="w-5 h-5" />
+              </a>
+              <a
+                href="https://codolio.com/profile/MzMgXSPm"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Codolio"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Code2 className="w-5 h-5" />
               </a>
             </div>
 

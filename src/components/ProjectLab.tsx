@@ -63,7 +63,7 @@ const projects = [
     tech: ['Socket.io', 'React', 'Node.js', 'Redis', 'Tailwind'],
     icon: Keyboard,
     links: {
-      source: 'https://github.com/A-b-h-i-n-a-v-1-9/typemaster',
+      source: 'https://github.com/Abh19avM/typemaster',
       live: 'https://typemaster-sepia.vercel.app/',
     },
   },
@@ -89,7 +89,7 @@ const projects = [
     icon: Link,
     badges: ['Blockchain'],
     links: {
-      source: 'https://github.com/A-b-h-i-n-a-v-1-9/new_block_cert-main',
+      source: 'https://github.com/Abh19avM/new_block_cert-main',
     },
   },
   {
@@ -102,7 +102,7 @@ const projects = [
     icon: Shirt,
     links: {
       source:
-        'https://github.com/A-b-h-i-n-a-v-1-9/custom-tshirt-store/tree/main',
+        'https://github.com/Abh19avM/custom-tshirt-store/tree/main',
       live: 'https://a-b-h-i-n-a-v-1-9.github.io/custom-tshirt-store/',
     },
   },
@@ -115,7 +115,7 @@ const projects = [
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Cloudinary'],
     icon: Heart,
     links: {
-      source: 'https://github.com/A-b-h-i-n-a-v-1-9/Mediquick',
+      source: 'https://github.com/Abh19avM/Mediquick',
     },
   },
 ];
