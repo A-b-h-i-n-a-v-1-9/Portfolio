@@ -71,7 +71,7 @@ const HeroSection = () => {
             className="flex flex-wrap gap-6 mb-10 font-mono text-sm"
           >
             <div className="flex items-center gap-2">
-              <span className="text-primary">8.42</span>
+              <span className="text-primary">8.49</span>
               <span className="text-muted-foreground/60">CGPA</span>
             </div>
             <div className="w-px h-4 bg-border" />
