@@ -76,12 +76,12 @@ const HeroSection = () => {
             </div>
             <div className="w-px h-4 bg-border" />
             <div className="flex items-center gap-2">
-              <span className="text-primary">1148</span>
-              <span className="text-muted-foreground/60">Codeforces</span>
+              <span className="text-primary">1522</span>
+              <span className="text-muted-foreground/60">LeetCode</span>
             </div>
             <div className="w-px h-4 bg-border" />
             <div className="flex items-center gap-2">
-              <span className="text-primary">885</span>
+              <span className="text-primary">1281</span>
               <span className="text-muted-foreground/60">CodeChef</span>
             </div>
           </motion.div>
